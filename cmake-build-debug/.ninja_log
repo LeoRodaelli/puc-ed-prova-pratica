@@ -1,0 +1,11 @@
+# ninja log v5
+4	348	6917812667460636	CMakeFiles/ED_prova_pratica.dir/main.c.obj	451ede73c2083d82
+352	765	6917812671630612	ED_prova_pratica.exe	70112d26c06b17d4
+24	271	6917812666700626	CMakeFiles/ED_prova_pratica.dir/Lista.c.obj	8f3efccc46b593b9
+16	339	6917812667340634	CMakeFiles/ED_prova_pratica.dir/ListaLigada.c.obj	574a8af4d320b764
+35	351	6917812667490640	CMakeFiles/ED_prova_pratica.dir/Pilha.c.obj	dcfd11d641bd3f4d
+3	110	6917820034163288	CMakeFiles/ED_prova_pratica.dir/Lista.c.obj	970ac429c591f124
+11	176	6917820034823281	CMakeFiles/ED_prova_pratica.dir/main.c.obj	e466ebf47cfcc9a2
+17	177	6917820034833302	CMakeFiles/ED_prova_pratica.dir/ListaLigada.c.obj	303324ce1ffe50f7
+23	181	6917820034883290	CMakeFiles/ED_prova_pratica.dir/Pilha.c.obj	9b185e094e21889b
+182	422	6917820037223273	ED_prova_pratica.exe	70112d26c06b17d4

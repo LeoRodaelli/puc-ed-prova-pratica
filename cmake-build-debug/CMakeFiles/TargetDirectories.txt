@@ -1,0 +1,3 @@
+C:/Users/leoro/OneDrive/puc-2semestre/ED-prova-pratica/puc-ed-prova-pratica/cmake-build-debug/CMakeFiles/ED_prova_pratica.dir
+C:/Users/leoro/OneDrive/puc-2semestre/ED-prova-pratica/puc-ed-prova-pratica/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/leoro/OneDrive/puc-2semestre/ED-prova-pratica/puc-ed-prova-pratica/cmake-build-debug/CMakeFiles/rebuild_cache.dir
