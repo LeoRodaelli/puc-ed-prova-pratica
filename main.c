@@ -1,35 +1,64 @@
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
-#include "Lista/Lista.h"
-#include "Pilha/Pilha.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include "Stack/Stack.h"
+#include "math.h"
 
-int getBase(int base) {
-    int value = 0;
+int main()
+{
+    int num;
+    char i;
 
-    value = sqrt(base * 2 + 1);
+    printf("Enter the number of cups:");
+    scanf("%d", &num);
 
-    return value;
-}
-
-int main(){
-    struct nodeLista *root = NULL;
-    // Calculo
-    int insert = 0;
-
-    printf("Digite a quantidade de copos:");
-    scanf("%d", &insert);
-
-    int base = getBase(insert);
-
-    int inicioAlfabeto = 97;
-
-    for(int i = base-1; i >= 0; i--){
-
-        insertLista(&root, insert);
-        inicioAlfabeto = insertPilha(root, inicioAlfabeto, i, insert);
-
+    if(num <= 0 || num > 26) {
+        printf("Numero de copos invalido!");
     }
-    printLista(root);
+    else {
+        printf("Total de copos: %i \n", num);
+        printf("total fileiras: %d \n", getBase(num));
+
+        printf("Total de copos por fileira: ");
+        for(int index = getBase(num); index >= 1; index--) {
+            if(index != 1)
+                printf("%i, ", index);
+            else
+                printf("%i", index);
+            }
+        printf("\n");
+
+        //Creating the stack
+        struct stack s;
+        s.top = NULL;
+
+        //Pushing alphabets into the stack
+        for(i='A'; i<='@'+num; i++) {
+            push(&s, i);
+        }
+
+        //Printing the cup tower
+        for(i=0; i<num; i++) {
+            //Creating a temporary stack to store the characters in the current row
+            struct stack temp;
+            temp.top = NULL;
+
+            for(int j=i; j<num; j++) {
+                printf(" ");
+            }
+
+            for(int k=0; k<=i; k++) {
+                //Pushing the character from the current row into the temporary stack
+                push(&temp, pop(&s));
+            }
+
+            //Popping the characters from the temporary stack in reverse order to invert the row
+            for(int l= i; l>=0; l--) {
+                printf("%c ", pop(&temp));
+            }
+
+            printf("\n");
+        }
+    }
     return 0;
 }
+
